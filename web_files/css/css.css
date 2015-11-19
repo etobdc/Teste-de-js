@@ -92,13 +92,3 @@ blockquote, q {
 .clear{
 	clear: both;
 }
-.show{
-	display: block;
-	transition: 1s;
-}
-.noShow{
-	display: none;
-}
-.show:active{
-	
-}

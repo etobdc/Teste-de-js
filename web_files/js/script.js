@@ -1,7 +1,7 @@
 //ÍNICIO CÓDIGO SLIDER
 var tempo;
 var troca = 0;
-function contaTempo() {
+function contaTempo() { 
 	tempo = setInterval(muda_img,2000);
 	console.log(tempo);
 }
