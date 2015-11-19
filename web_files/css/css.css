@@ -1,0 +1,104 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+#site{
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: 400;
+	width: 100%;
+	margin: 0 auto;
+}
+.centralizar{
+	margin: 0 15% 0 15%;
+	background-color: #a5aaad;
+	min-height: 15em;
+
+}
+.conteudo{
+	width: 100%;
+	padding: 2em;
+
+}
+/*SlIDES*/
+.slides{
+	min-height: 250px;
+}
+.slides ul{
+	min-height: 250px;
+	max-height: 250px;
+	max-width: 450px;
+	min-width: 450px;
+	margin: 0 auto;
+	
+}
+.slides ul li{
+	min-height: 250px;
+	max-height: 250px;
+	max-width: 450px;
+	min-width: 450px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	transition: 1s;
+	opacity: 0;
+}
+.clear{
+	clear: both;
+}
+.show{
+	display: block;
+	transition: 1s;
+}
+.noShow{
+	display: none;
+}
+.show:active{
+	
+}
