@@ -39,25 +39,49 @@ function troca_tab(x){
     	document.getElementById("tab_content_4").style.display = "none";
 
     	document.getElementById("tab_content_1").style.display = "block";
-    	document.getElementById("tab_content_1").style.border =  "black";
+    	//document.getElementById("tab_1").style.borderRight =  "none";
+
+    	document.getElementById('tab_1').className = 'active tabs';
+
+    	document.getElementById('tab_2').className = ' tabs';
+    	document.getElementById('tab_3').className = ' tabs';
+    	document.getElementById('tab_4').className = ' tabs';
     }else if(x == 'tab_2'){
     	document.getElementById("tab_content_1").style.display = "none";
     	document.getElementById("tab_content_3").style.display = "none";
     	document.getElementById("tab_content_4").style.display = "none";
 
     	document.getElementById("tab_content_2").style.display = "block";
+
+    	document.getElementById('tab_2').className = 'active tabs';
+
+    	document.getElementById('tab_1').className = ' tabs';
+    	document.getElementById('tab_3').className = ' tabs';
+    	document.getElementById('tab_4').className = ' tabs';
     }else if(x == 'tab_3'){
     	document.getElementById("tab_content_1").style.display = "none";
     	document.getElementById("tab_content_2").style.display = "none";
     	document.getElementById("tab_content_4").style.display = "none";
 
     	document.getElementById("tab_content_3").style.display = "block";
+
+    	document.getElementById('tab_3').className = 'active tabs';
+
+    	document.getElementById('tab_1').className = ' tabs';
+    	document.getElementById('tab_2').className = ' tabs';
+    	document.getElementById('tab_4').className = ' tabs';
     }else if(x == 'tab_4'){
     	document.getElementById("tab_content_1").style.display = "none";
     	document.getElementById("tab_content_2").style.display = "none";
     	document.getElementById("tab_content_3").style.display = "none";
 
     	document.getElementById("tab_content_4").style.display= "block";
+
+    	document.getElementById('tab_4').className = 'active tabs';
+
+    	document.getElementById('tab_1').className = ' tabs';
+    	document.getElementById('tab_2').className = ' tabs';
+    	document.getElementById('tab_3').className = ' tabs';
     }
 }
 //FIM CÓDIGO TABS
