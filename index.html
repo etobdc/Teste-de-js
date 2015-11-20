@@ -8,24 +8,52 @@
 </head>
 <body onload="contaTempo()">
 	<div id="site">		
-	    <div class="centralizar">
-	    <div class="slides">
-			<ul>
-				<li id="img1"  style="background-image:url('http://lorempixel.com/450/250/technics/');">
-					
-				</li>
-				<li id="img2" style="background-image:url('http://lorempixel.com/450/250/sports/');">
-					
-				</li>
-				<li id="img3"  style="background-image:url('http://lorempixel.com/450/250/nature/');">
-					
-				</li>
-			</ul>
+		<div class="centralizar">
+			<div class="tab">
+				<ul class="lista_tabs">
+					<li id="tab_1" class="tabs" onclick="troca_tab('tab_1')">
+						<p>Slides</p>
+					</li>
+					<li id="tab_2" class="tabs" onclick="troca_tab('tab_2')">
+						<p>Busca CEP</p>
+					</li>
+					<li id="tab_3" class="tabs" onclick="troca_tab('tab_3')">
+						<p>Ordenar N&uacute;meros</p>
+					</li>
+					<li id="tab_4" class="tabs" onclick="troca_tab('tab_4')">
+						<p>Misturar N&uacute;meros</p>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="tab_contant">
+				<div id="tab_content_1" class="slides">
+					<ul>
+						<li id="img1"  style="background-image:url('http://lorempixel.com/450/250/technics/');">
+
+						</li>
+						<li id="img2" style="background-image:url('http://lorempixel.com/450/250/sports/');">
+
+						</li>
+						<li id="img3"  style="background-image:url('http://lorempixel.com/450/250/nature/');">
+
+						</li>
+					</ul>
+				</div>
+				<div id="tab_content_2" style="display:none">
+					<p>Busca CEP</p>
+				</div> 
+				<div id="tab_content_3" style="display:none">
+					<p>Ordenar N&uacute;meros</p>
+				</div>
+				<div id="tab_content_4" style="display:none">
+					<p>Misturar N&uacute;meros</p>
+				</div>
+			</div>
+			<div class="conteudo">
+				<p>asdasdasdasdasdasdasd</p>
+			</div>
 		</div>
-	        <div class="conteudo">
-	        	<p>asdasdasdasdasdasdasd</p>
-	        </div>
-	    </div>
 	</div>
 </body>
 </html> 

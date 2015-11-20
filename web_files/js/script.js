@@ -30,3 +30,34 @@ function muda_img(){
 	}
 }
 //FIM CÓDIGO SLIDER
+//ÍNICIO CÓDIGO TABS
+function troca_tab(x){
+	console.log(x);
+    if (x == 'tab_1') {
+    	document.getElementById("tab_content_2").style.display = "none";
+    	document.getElementById("tab_content_3").style.display = "none";
+    	document.getElementById("tab_content_4").style.display = "none";
+
+    	document.getElementById("tab_content_1").style.display = "block";
+    	document.getElementById("tab_content_1").style.border =  "black";
+    }else if(x == 'tab_2'){
+    	document.getElementById("tab_content_1").style.display = "none";
+    	document.getElementById("tab_content_3").style.display = "none";
+    	document.getElementById("tab_content_4").style.display = "none";
+
+    	document.getElementById("tab_content_2").style.display = "block";
+    }else if(x == 'tab_3'){
+    	document.getElementById("tab_content_1").style.display = "none";
+    	document.getElementById("tab_content_2").style.display = "none";
+    	document.getElementById("tab_content_4").style.display = "none";
+
+    	document.getElementById("tab_content_3").style.display = "block";
+    }else if(x == 'tab_4'){
+    	document.getElementById("tab_content_1").style.display = "none";
+    	document.getElementById("tab_content_2").style.display = "none";
+    	document.getElementById("tab_content_3").style.display = "none";
+
+    	document.getElementById("tab_content_4").style.display= "block";
+    }
+}
+//FIM CÓDIGO TABS
