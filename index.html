@@ -48,25 +48,51 @@
 				<div id="tab_content_3" style="display:none">
 					<div class="form">
 						<div class="campos">
-							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3" min="1" max="100">
+							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3">
 							
 						</div>
-						<button class="btn" onclick="ordem()">Ordenar</button>
+						<button class="btn" onclick="ordem('1')">Ordenar</button>
 						<div class="clear"></div>
 						<div class="resultado"><p id="resu"></p></div>
 					</div>
 					<div class="clear"></div>
-				</div>
-				<div id="tab_content_4" style="display:none">
-					<form class="form">
+					<div class="form">
 						<div class="campos">
-							<input type="number" id="nums_2" placeholder="Digite cinco n&uacute;meros" min="1" max="100" required="">
+							<input type="text" id="nums1" placeholder="Digite algum n&uacute;mero" maxlength="3">
+							<input type="text" id="nums2" placeholder="Digite algum n&uacute;mero" maxlength="3">
+							<input type="text" id="nums3" placeholder="Digite algum n&uacute;mero" maxlength="3">
 							
 						</div>
-						<button type="submit" class="btn" onclick="misturar()">Misturar</button>
+						<button class="btn" onclick="ordem('2')">Ordenar</button>
+						<div class="clear"></div>
+						<div class="resultado"><p id="resultado2"></p></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="tab_content_4" style="display:none">
+					<div class="form">
+						<div class="campos">
+							<input type="text" id="nums_2" placeholder="Digite cinco n&uacute;meros" maxlength="5">
+							
+						</div>
+						<button class="btn" onclick="misturar('1')">Misturar</button>
 						<div class="clear"></div>
 						<div class="resultado"><p id="resu2"></p></div>
-					</form>
+					</div>
+					<div class="clear"></div>
+					<div class="form">
+						<div class="campos">
+							<input type="text" id="numero_1" placeholder="Digite cinco n&uacute;meros" maxlength="8">
+							<input type="text" id="numero_2" placeholder="Digite cinco n&uacute;meros" maxlength="8">
+							<input type="text" id="numero_3" placeholder="Digite cinco n&uacute;meros" maxlength="8">
+							<input type="text" id="numero_4" placeholder="Digite cinco n&uacute;meros" maxlength="8">
+							<input type="text" id="numero_5" placeholder="Digite cinco n&uacute;meros" maxlength="8">
+							
+						</div>
+						<button class="btn" onclick="misturar('2')">Misturar</button>
+						<div class="clear"></div>
+						<div class="resultado"><p id="resu_2"></p></div>
+					</div>
 					<div class="clear"></div>
 				</div>
 			</div>
