@@ -48,7 +48,7 @@
 				<div id="tab_content_3" style="display:none">
 					<div class="form">
 						<div class="campos">
-							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3">
+							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3" min="1" max="100">
 							
 						</div>
 						<button class="btn" onclick="ordem()">Ordenar</button>
@@ -58,7 +58,16 @@
 					<div class="clear"></div>
 				</div>
 				<div id="tab_content_4" style="display:none">
-					<p>Misturar N&uacute;meros</p>
+					<form class="form">
+						<div class="campos">
+							<input type="number" id="nums_2" placeholder="Digite cinco n&uacute;meros" min="1" max="100" required="">
+							
+						</div>
+						<button type="submit" class="btn" onclick="misturar()">Misturar</button>
+						<div class="clear"></div>
+						<div class="resultado"><p id="resu2"></p></div>
+					</form>
+					<div class="clear"></div>
 				</div>
 			</div>
 			<div class="conteudo">

@@ -1,5 +1,6 @@
 # Teste-de-js
 Teste de JavaScript v1.0. 
+<link rel="stylesheet" type="text/css" href="web_files/css/css.css">
 
 <p>
 <code>Função contaTempo</code>:<br><br>

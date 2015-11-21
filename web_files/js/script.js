@@ -88,7 +88,7 @@ function ordem(){
 	var nums = document.getElementById("nums").value;
 	if(nums != ''){
 		var numeros = nums.split("");
-		
+
 
 
 		function ordenar(a, b){
@@ -109,3 +109,34 @@ document.getElementById("resu").style.boxShadow = "-4px 8px 25px 2px rgba(50, 50
 }
 
 //FIM CÓDIGO ORDENAR
+
+//ÍNICIO DE MISTURAR
+function misturar(){
+	var nums_2 = document.getElementById("nums_2").value;
+	console.log(nums_2);
+	if(nums_2 != ''){
+		var numeros_2 = nums_2.split("");
+
+		console.log(numeros_2);
+
+		function desordenar(a, b){
+			return (Math.round(Math.random())-0.5);
+		}   
+
+		var resultado_2 = (numeros_2.sort(desordenar)); 
+		document.getElementById("resu2").innerHTML = resultado_2;
+		document.getElementById("resu2").style.padding = "0.5em";
+		document.getElementById("resu2").style.boxShadow = "-4px 8px 25px 2px rgba(50, 50, 50, 0.63)";
+	}else if(nums_2 == ''){
+		document.getElementById("resu2").innerHTML = 'Por favor, Digite os números';
+		document.getElementById("resu2").style.padding = "0.5em";
+		document.getElementById("resu2").style.boxShadow = "-4px 8px 25px 2px rgba(50, 50, 50, 0.63)";
+	}else if(0 > nums_2){
+		document.getElementById("resu2").innerHTML = 'Por favor, Digite números válidos';
+		document.getElementById("resu2").style.padding = "0.5em";
+		document.getElementById("resu2").style.boxShadow = "-4px 8px 25px 2px rgba(50, 50, 50, 0.63)";
+	}
+}
+
+
+//FIM CÓDIGO MISTURAR
