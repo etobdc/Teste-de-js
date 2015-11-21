@@ -46,7 +46,16 @@
 					<p>Busca CEP</p>
 				</div> 
 				<div id="tab_content_3" style="display:none">
-					<p>Ordenar N&uacute;meros</p>
+					<div class="form">
+						<div class="campos">
+							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3">
+							
+						</div>
+						<button class="btn" onclick="ordem()">Ordenar</button>
+						<div class="clear"></div>
+						<div class="resultado"><p id="resu"></p></div>
+					</div>
+					<div class="clear"></div>
 				</div>
 				<div id="tab_content_4" style="display:none">
 					<p>Misturar N&uacute;meros</p>
