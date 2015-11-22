@@ -30,25 +30,52 @@
 			<div class="clear"></div>
 			<div class="tab_contant">
 				<div id="tab_content_1" class="slides">
-					<ul>
-						<li id="img1"  style="background-image:url('http://lorempixel.com/450/250/technics/');">
+					<ul id="lista_imagens">
+						<li id="load" class="lista" style="opacity:1;background-size: initial;background-image:url('web_files/imagens/load.gif');">
 
 						</li>
-						<li id="img2" style="background-image:url('http://lorempixel.com/450/250/sports/');">
+						<li id="img1" class="lista" style="visibility: hidden; background-image:url('http://lorempixel.com/450/250/technics/');">
 
 						</li>
-						<li id="img3"  style="background-image:url('http://lorempixel.com/450/250/nature/');">
+						<li id="img2" class="lista" style="visibility: hidden; background-image:url('http://lorempixel.com/450/250/sports/');">
 
 						</li>
+						<li id="img3"  class="lista" style="visibility: hidden; background-image:url('http://lorempixel.com/450/250/nature/');">
+
+						</li>
+
 					</ul>
+					<div class="direcionais">
+						<ul>
+							<li class="circle ">
+								<div id="circ_1"class="circulo" onclick="muda_img('1')"></div>
+							</li>
+							<li class="circle ">
+								<div id="circ_2"  class="circulo" onclick="muda_img('2')"></div>
+							</li>
+							<li  class="circle ">
+								<div id="circ_3" class="circulo" onclick="muda_img('3')"></div>
+							</li>
+							<div class="clear"></div>
+						</ul>
+						<div class="clear"></div>
+					</div>
 				</div>
 				<div id="tab_content_2" style="display:none">
-					<p>Busca CEP</p>
+					<div class="form">
+						<div class="campos">
+							<input type="text" id="cep" placeholder="Digite o nome de sua Cidade">
+							
+						</div>
+						<button class="btn" onclick="ordem('1')">Ordenar</button>
+						<div class="clear"></div>
+						<div class="resultado"><p id="resu"></p></div>
+					</div>
 				</div> 
 				<div id="tab_content_3" style="display:none">
 					<div class="form">
 						<div class="campos">
-							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3">
+							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							
 						</div>
 						<button class="btn" onclick="ordem('1')">Ordenar</button>
@@ -58,9 +85,9 @@
 					<div class="clear"></div>
 					<div class="form">
 						<div class="campos">
-							<input type="text" id="nums1" placeholder="Digite algum n&uacute;mero" maxlength="3">
-							<input type="text" id="nums2" placeholder="Digite algum n&uacute;mero" maxlength="3">
-							<input type="text" id="nums3" placeholder="Digite algum n&uacute;mero" maxlength="3">
+							<input type="text" id="nums1" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
+							<input type="text" id="nums2" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
+							<input type="text" id="nums3" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							
 						</div>
 						<button class="btn" onclick="ordem('2')">Ordenar</button>
@@ -72,7 +99,7 @@
 				<div id="tab_content_4" style="display:none">
 					<div class="form">
 						<div class="campos">
-							<input type="text" id="nums_2" placeholder="Digite cinco n&uacute;meros" maxlength="5">
+							<input type="text" id="nums_2" placeholder="Digite cinco n&uacute;meros" maxlength="5" onkeypress='return SomenteNumero(event)'>
 							
 						</div>
 						<button class="btn" onclick="misturar('1')">Misturar</button>
@@ -82,11 +109,11 @@
 					<div class="clear"></div>
 					<div class="form">
 						<div class="campos">
-							<input type="text" id="numero_1" placeholder="Digite cinco n&uacute;meros" maxlength="8">
-							<input type="text" id="numero_2" placeholder="Digite cinco n&uacute;meros" maxlength="8">
-							<input type="text" id="numero_3" placeholder="Digite cinco n&uacute;meros" maxlength="8">
-							<input type="text" id="numero_4" placeholder="Digite cinco n&uacute;meros" maxlength="8">
-							<input type="text" id="numero_5" placeholder="Digite cinco n&uacute;meros" maxlength="8">
+							<input type="text" id="numero_1" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
+							<input type="text" id="numero_2" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
+							<input type="text" id="numero_3" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
+							<input type="text" id="numero_4" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
+							<input type="text" id="numero_5" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							
 						</div>
 						<button class="btn" onclick="misturar('2')">Misturar</button>
