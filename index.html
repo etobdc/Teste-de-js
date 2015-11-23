@@ -63,22 +63,23 @@
 				</div>
 				<div id="tab_content_2" style="display:none" class="repair_height"> 
 					<div class="form">
-						<div class="campos">	
-							<form method="get" action=".">
+						
+						<form method="get" action=".">
+							<div class="campos">
 								<h2>Econtre o CEP pela localidade</h2>							
 								<label>Estado:
 									<div class="clear"></div>
-									<input name="uf" type="text" id="uf" size="2" />
+									<input name="uf" type="text" id="uf" size="2" maxlength="2" placeholder="Digite a sigla de seu estado"/>
 								</label><br />
 								
 								<label>Cidade:
 									<div class="clear"></div>
-									<input name="cidade" type="text" id="cidade" size="40" />
+									<input name="cidade" type="text" id="cidade" size="40" placeholder="Digite o nome de sua cidade"/>
 								</label><br />
 								
 								<label>Rua:
 									<div class="clear"></div>
-									<input name="rua" type="text" id="rua" size="60"  onblur="busca_cep()" />
+									<input name="rua" type="text" id="rua" size="60"  onblur="busca_cep()"  placeholder="Digite o nome de sua rua"/>
 								</label><br />
 								<label>Cep:
 									<div class="clear"></div>
@@ -93,7 +94,7 @@
 								<label>Cep:
 									<div class="clear"></div>
 									<input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
-									onblur="pesquisacep(this.value);" onkeypress='return SomenteNumero(event)'/>
+									onblur="pesquisacep(this.value);" onkeypress='return SomenteNumero(event)' placeholder="Digite seu CEP"/>
 								</label><br />
 								<label>Rua:
 									<div class="clear"></div>
@@ -110,7 +111,6 @@
 								<label>Estado:
 									<div class="clear"></div>
 									<input name="uf" type="text" id="uf2" size="2" readonly=""/>
-									<input name="ibge" type="text" id="ibge2" value="" size="50" readonly=""/>
 								</label><br />
 							</div>
 						</form>
@@ -119,51 +119,63 @@
 				</div> 
 				<div id="tab_content_3" style="display:none">
 					<div class="form">
-						<div class="campos">
-							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
+						<div class="simula_form">						
+							<div class="campos">
+								<h2>Ordene o n&uacute;mero digitado</h2>
+								<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
 
+							</div>
+							<button class="btn" onclick="ordem('1')">Ordenar</button>
+							<div class="clear"></div>
+							<div class="resultado"><p id="resu"></p></div>
 						</div>
-						<button class="btn" onclick="ordem('1')">Ordenar</button>
-						<div class="clear"></div>
-						<div class="resultado"><p id="resu"></p></div>
 					</div>
 					<div class="clear"></div>
 					<div class="form">
-						<div class="campos">
-							<input type="text" id="nums1" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							<input type="text" id="nums2" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							<input type="text" id="nums3" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
+						<div class="simula_form">
+							<div class="campos">
+								<h2>Ordene os diversos n&uacute;meros digitados</h2>
+								<input type="text" id="nums1" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
+								<input type="text" id="nums2" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
+								<input type="text" id="nums3" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
 
+							</div>
+							<button class="btn" onclick="ordem('2')">Ordenar</button>
+							<div class="clear"></div>
+							<div class="resultado"><p id="resultado2"></p></div>
 						</div>
-						<button class="btn" onclick="ordem('2')">Ordenar</button>
 						<div class="clear"></div>
-						<div class="resultado"><p id="resultado2"></p></div>
 					</div>
-					<div class="clear"></div>
 				</div>
 				<div id="tab_content_4" style="display:none">
 					<div class="form">
-						<div class="campos">
-							<input type="text" id="nums_2" placeholder="Digite cinco n&uacute;meros" maxlength="5" onkeypress='return SomenteNumero(event)'>
+						<div class="simula_form">
+							<div class="campos">
+								<h2>Misture o n&uacute;mero digitado</h2>
+								<input type="text" id="nums_2" placeholder="Digite cinco n&uacute;meros" maxlength="5" onkeypress='return SomenteNumero(event)'>
 
+							</div>
+							<button class="btn" onclick="misturar('1')">Misturar</button>
+							<div class="clear"></div>
+							<div class="resultado"><p id="resu2"></p></div>
 						</div>
-						<button class="btn" onclick="misturar('1')">Misturar</button>
-						<div class="clear"></div>
-						<div class="resultado"><p id="resu2"></p></div>
 					</div>
 					<div class="clear"></div>
 					<div class="form">
-						<div class="campos">
-							<input type="text" id="numero_1" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							<input type="text" id="numero_2" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							<input type="text" id="numero_3" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							<input type="text" id="numero_4" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							<input type="text" id="numero_5" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
+						<div class="simula_form">
+							<div class="campos">
+								<h2>Misture os diversos n&uacute;meros digitados</h2>
+								<input type="text" id="numero_1" placeholder="Digite algum n&uacute;mero de 0 a 100" maxlength="3" onkeypress='return SomenteNumero(event)'>
+								<input type="text" id="numero_2" placeholder="Digite algum n&uacute;mero de 0 a 100" maxlength="3" onkeypress='return SomenteNumero(event)'>
+								<input type="text" id="numero_3" placeholder="Digite algum n&uacute;mero de 0 a 100" maxlength="3" onkeypress='return SomenteNumero(event)'>
+								<input type="text" id="numero_4" placeholder="Digite algum n&uacute;mero de 0 a 100" maxlength="3" onkeypress='return SomenteNumero(event)'>
+								<input type="text" id="numero_5" placeholder="Digite algum n&uacute;mero de 0 a 100" maxlength="3" onkeypress='return SomenteNumero(event)'>
 
+							</div>
+							<button class="btn" onclick="misturar('2')">Misturar</button>
+							<div class="clear"></div>
+							<div class="resultado"><p id="resu_2"></p></div>
 						</div>
-						<button class="btn" onclick="misturar('2')">Misturar</button>
-						<div class="clear"></div>
-						<div class="resultado"><p id="resu_2"></p></div>
 					</div>
 					<div class="clear"></div>
 				</div>

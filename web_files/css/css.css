@@ -214,3 +214,8 @@ blockquote, q {
 	box-shadow: rgba(50, 50, 50, 0.74902) 7px 7px 5px 0px;
 	margin: 0.5em;
 }
+.form .simula_form{
+	border:1px solid red;
+	box-shadow: rgba(50, 50, 50, 0.74902) 7px 7px 5px 0px;
+	margin: 0.5em;
+}

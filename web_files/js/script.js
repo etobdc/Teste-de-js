@@ -284,26 +284,22 @@ function misturar(x){
 //ÍNICIO CÓDIGO BUSCA CEP
 
 function limpa_formulário_cep() {
-            //Limpa valores do formulário de cep.
             document.getElementById('rua2').value=("");
             document.getElementById('bairro2').value=("");
             document.getElementById('cidade2').value=("");
             document.getElementById('uf2').value=("");
-            document.getElementById('ibge2').value=("");
+
         }
 
         function meu_callback(conteudo) {
         	console.log(conteudo);
         	if (!("erro" in conteudo)) {
-            //Atualiza os campos com os valores.
             document.getElementById('rua2').value=(conteudo.logradouro);
             document.getElementById('bairro2').value=(conteudo.bairro);
             document.getElementById('cidade2').value=(conteudo.localidade);
             document.getElementById('uf2').value=(conteudo.uf);
-            document.getElementById('ibge2').value=(conteudo.ibge);
-        } //end if.
+        } 
         else {
-            //CEP não Encontrado.
             limpa_formulário_cep();
             alert("CEP não encontrado.");
         }
@@ -311,69 +307,55 @@ function limpa_formulário_cep() {
 
     function pesquisacep(valor) {
 
-        //Nova variável "cep" somente com dígitos.
         var cep = valor.replace(/\D/g, '');
 
-        //Verifica se campo cep possui valor informado.
         if (cep != "") {
 
-            //Expressão regular para validar o CEP.
             var validacep = /^[0-9]{8}$/;
 
             //Valida o formato do CEP.
             if(validacep.test(cep)) {
 
-                //Preenche os campos com "..." enquanto consulta webservice.
                 document.getElementById('rua2').value="...";
                 document.getElementById('bairro2').value="...";
                 document.getElementById('cidade2').value="...";
                 document.getElementById('uf2').value="...";
-                document.getElementById('ibge2').value="...";
-
-                //Cria um elemento javascript.
                 var script = document.createElement('script');
 
-                //Sincroniza com o callback.
                 script.src = 'http://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
-
-                //Insere script no documento e carrega o conteúdo.
+                 console.log(script.src);
                 document.body.appendChild(script);
 
-            } //end if.
+            } 
             else {
-                //cep é inválido.
+                
                 limpa_formulário_cep();
                 alert("Formato de CEP inválido.");
             }
-        } //end if.
+        } 
         else {
-            //cep sem valor, limpa formulário.
+            
             limpa_formulário_cep();
         }
     };
 
 
-    function oi(conteudo2) {
-    	console.log(conteudo2)
+    function meu_cep(conteudo2) {
+    	console.log(conteudo2);
     	document.getElementById('cep_buscar').value=(conteudo2[0].cep);
     }
     function busca_cep(){
     	var uf = document.getElementById('uf').value;
     	var cidade = document.getElementById('cidade').value;
     	var rua = document.getElementById('rua').value;
-    	console.log(uf);
-    	console.log(cidade);
-    	console.log(rua);
 
     	if(uf != '' && cidade != '' && rua != ''){
     		document.getElementById('cep_buscar').value="...";
 
                 //Cria um elemento javascript.
                 var script = document.createElement('script');
-
-                console.log(script);
                 //Sincroniza com o callback.
-                script.src = 'https://viacep.com.br/ws/'+uf+'/'+cidade+'/'+rua+'/json/?callback=oi';
+                script.src = 'https://viacep.com.br/ws/'+uf+'/'+cidade+'/'+rua+'/json/?callback=meu_cep';
                 console.log(script.src);
                 //Insere script no documento e carrega o conteúdo.
                 document.body.appendChild(script);

@@ -1,5 +1,5 @@
 # Teste-de-js
-Teste de JavaScript v1.0. 
+Teste de JavaScript v1.1. 
 <link rel="stylesheet" type="text/css" href="web_files/css/css.css">
 
 <p>
@@ -9,6 +9,10 @@ Fica num looping infinito contando até o valor específicado, cada vez que cheg
 <code style="color:red;">function troca_tab</code> pega um valor e o envia ao script, lá fa&ccedil;o a verifica&ccedil;&atilde;o dele, quadno encontra o valor correspondente ele da display block na tab selcionada, display none nas outras, e adiciona uma classe na li selcionada para dar um efeito, ao mesmo tempo tirando das outras.<br><br>
 <code style="color:red;">Function SomenteNumero</code> Uma fun&ccedil;&atilde;o que &eacute; acionada a cada tecla precionada, habilitando somente as teclas num&eacute;ricas, para evitar erros no script.<Br><br>
 <code style="color:red;">Function ordem</code> é o gatilho para varias fun&ccedil;&otilde;es, ao clicar nela ela leva consigo um numero que &eacute; verifica para saber quais dos c&oacute;digos executar. A <code style="color:red;">Function ordenar</code> serve para estabelcer uma ordem, no caso a - b, que serve para determinar ordem crecente nos valores,(ou seja se fosse b - a seria ordem descrescente); ela &eacute; usada em conjuto com o method <code style="color:red;">.sort</code> que pega os numeros e os distribui na ordem que a <code style="color:red;">function ordenar</code> está. O method <code style="color:red;">.split</code> está sendo usado para separ os numeros por virgula dentro de um array.<br><br>
-<code style="color:red;">Function misturar</code> Funciona praticamente como a <code style="color:red;">function ordem</code> disparando outras fun&ccedil;&oatilde;es. <code style="color:red;">function desordenar</code> está usando o math.roud e math.ramdom para determinar uma ordem randomica. Do mesmo modo ele é usado mais adiante em conjunto com o method <code style="color:red;">.sort</code> para embaralhar os numeros.<br><br>
+<code style="color:red;">Function misturar</code> Funciona praticamente como a <code style="color:red;">function ordem</code> disparando outras fun&ccedil;&otilde;es. <code style="color:red;">function desordenar</code> está usando o math.roud e math.ramdom para determinar uma ordem randomica. Do mesmo modo ele é usado mais adiante em conjunto com o method <code style="color:red;">.sort</code> para embaralhar os numeros.<br><br>
 <code style="color:red;">Function busca_cep</code> &Eacute; baseada na <code style="color:red;">funtion pequisacep</code> porém ao contrario desta fun&ccedil;&atilde;o ela retorna o resultado dentro de um array, o qual n&atilde;o estou consiguindo pegar os resultados. :p :/ T.T
+
+<code style="color:red;">Function pesquisacep</code> e as demais realcionadas com a pesquisa de cep,(exeto a <code style="color:red;">function busca_cep</code>), foram retiradas do site <a href="https://viacep.com.br/">https://viacep.com.br/</a> e foram usadas como exemplo para a tentativa de fazer a busca de cep, porém tive difuculdades ao tentar pegar os dados da pesquisa, digite o estado a cidade e a rua e abra o console clique no link, lá terá os dados, porém não consegui pega-los pelo callback.
+
+Para upar o projeto no github; Primenramente criei um repositorio no github, após isso fiz um pull request e baixe o respositorio no pc, em seguida adicionei os arquivos e fui modificando-os; ao terminar cada parte, adicionava, commitava e dava push nos arquivos para o github.
 </p>
