@@ -88,6 +88,10 @@ blockquote, q {
 	position: absolute;
 	transition: 1s;
 	opacity: 0;
+	box-shadow: rgba(50, 50, 50, 0.74902) 7px 7px 5px 0px;
+}
+.direcionais{
+	padding-top: 0.5em;
 }
 .clear{
 	clear: both;
@@ -99,17 +103,16 @@ blockquote, q {
 
 .circulo {
 	width: 1em;
-    height: 1em;
-    background-color: #9A9797;
-    cursor: pointer;
-    border-radius: 10px 10px;
-    transition:1s;
+	height: 1em;
+	background-color: #9A9797;
+	cursor: pointer;
+	border-radius: 10px 10px;
+	transition:1s;
 
 }
 /******TABS****/
 .tab_contant{
 	min-height: 250px;
-	max-height: 250px;
 	max-width: 450px;
 	min-width: 450px;
 	margin: 0 auto;
@@ -166,9 +169,11 @@ blockquote, q {
 	padding: 0.3em;
 	text-align:center;
 	color: red;
+	margin: 0.5em;
 }
 .form .campos input:focus{
 	border-color: red;
+	box-shadow: rgba(50, 50, 50, 0.74902) 7px 7px 5px 0px;
 }
 .btn{
 	padding: 0.5em;
@@ -192,4 +197,20 @@ blockquote, q {
 }
 .code{
 	color: red;
+}
+/*BUSCA DE CEP*/
+.repair_height{
+	min-height: 50em;
+}
+.campos h2{
+	color: red;
+	font-weight: 700;
+	font-family: calibri;
+	font-size: 25px;
+	padding: 0.5em;
+}
+.form form{
+	border:1px solid red;
+	box-shadow: rgba(50, 50, 50, 0.74902) 7px 7px 5px 0px;
+	margin: 0.5em;
 }

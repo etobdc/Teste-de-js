@@ -61,22 +61,67 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-				<div id="tab_content_2" style="display:none">
+				<div id="tab_content_2" style="display:none" class="repair_height"> 
 					<div class="form">
-						<div class="campos">
-							<input type="text" id="cep" placeholder="Digite o nome de sua Cidade">
-							
-						</div>
-						<button class="btn" onclick="ordem('1')">Ordenar</button>
+						<div class="campos">	
+							<form method="get" action=".">
+								<h2>Econtre o CEP pela localidade</h2>							
+								<label>Estado:
+									<div class="clear"></div>
+									<input name="uf" type="text" id="uf" size="2" />
+								</label><br />
+								
+								<label>Cidade:
+									<div class="clear"></div>
+									<input name="cidade" type="text" id="cidade" size="40" />
+								</label><br />
+								
+								<label>Rua:
+									<div class="clear"></div>
+									<input name="rua" type="text" id="rua" size="60"  onblur="busca_cep()" />
+								</label><br />
+								<label>Cep:
+									<div class="clear"></div>
+									<input name="cep" type="text" id="cep_buscar" value="" size="10" readonly=""/>
+								</label>
+								<div class="clear"></div>
+							</div>
+						</form>
+						<form method="get" action=".">
+							<div class="campos">
+								<h2>Econtre a localidade pelo CEP</h2>
+								<label>Cep:
+									<div class="clear"></div>
+									<input name="cep" type="text" id="cep" value="" size="10" maxlength="8"
+									onblur="pesquisacep(this.value);" onkeypress='return SomenteNumero(event)'/>
+								</label><br />
+								<label>Rua:
+									<div class="clear"></div>
+									<input name="rua" type="text" id="rua2" size="60" readonly="" />
+								</label><br />
+								<label>Bairro:
+									<div class="clear"></div>
+									<input name="bairro" type="text" id="bairro2" size="40" readonly=""/>
+								</label><br />
+								<label>Cidade:
+									<div class="clear"></div>
+									<input name="cidade" type="text" id="cidade2" size="40" readonly=""/>
+								</label><br />
+								<label>Estado:
+									<div class="clear"></div>
+									<input name="uf" type="text" id="uf2" size="2" readonly=""/>
+									<input name="ibge" type="text" id="ibge2" value="" size="50" readonly=""/>
+								</label><br />
+							</div>
+						</form>
 						<div class="clear"></div>
-						<div class="resultado"><p id="resu"></p></div>
 					</div>
 				</div> 
 				<div id="tab_content_3" style="display:none">
 					<div class="form">
 						<div class="campos">
 							<input type="text" id="nums" placeholder="Digite tr&ecirc;s n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							
+
 						</div>
 						<button class="btn" onclick="ordem('1')">Ordenar</button>
 						<div class="clear"></div>
@@ -88,7 +133,7 @@
 							<input type="text" id="nums1" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							<input type="text" id="nums2" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							<input type="text" id="nums3" placeholder="Digite algum n&uacute;mero" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							
+
 						</div>
 						<button class="btn" onclick="ordem('2')">Ordenar</button>
 						<div class="clear"></div>
@@ -100,7 +145,7 @@
 					<div class="form">
 						<div class="campos">
 							<input type="text" id="nums_2" placeholder="Digite cinco n&uacute;meros" maxlength="5" onkeypress='return SomenteNumero(event)'>
-							
+
 						</div>
 						<button class="btn" onclick="misturar('1')">Misturar</button>
 						<div class="clear"></div>
@@ -114,7 +159,7 @@
 							<input type="text" id="numero_3" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							<input type="text" id="numero_4" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
 							<input type="text" id="numero_5" placeholder="Digite cinco n&uacute;meros" maxlength="3" onkeypress='return SomenteNumero(event)'>
-							
+
 						</div>
 						<button class="btn" onclick="misturar('2')">Misturar</button>
 						<div class="clear"></div>
@@ -122,8 +167,6 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-			</div>
-			<div class="conteudo">
 			</div>
 		</div>
 	</div>
